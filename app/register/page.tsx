@@ -11,7 +11,6 @@ export default function RegisterPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4">
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
-        {/* Header */}
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-gray-800">
             Create Account
@@ -21,16 +20,13 @@ export default function RegisterPage() {
           </p>
         </div>
 
-        {/* Error message */}
         {state.error && (
           <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
             {state.error}
           </div>
         )}
 
-        {/* Form */}
         <form action={formAction} className="space-y-5">
-          {/* Email */}
           <div>
             <label className="mb-1 block text-sm font-medium text-gray-700">
               Email
@@ -46,7 +42,6 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="mb-1 block text-sm font-medium text-gray-700">
               Password
@@ -62,7 +57,6 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Button */}
           <button
             type="submit"
             className="w-full rounded-lg bg-black py-2.5 text-sm
@@ -73,7 +67,6 @@ export default function RegisterPage() {
           </button>
         </form>
 
-        {/* Footer */}
         <div className="mt-6 text-center text-sm text-gray-500">
           Already have an account?{' '}
           <a

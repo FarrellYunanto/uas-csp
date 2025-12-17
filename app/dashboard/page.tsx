@@ -1,5 +1,4 @@
 import { createClient } from "@/lib/supabase";
-import { redirect } from "next/navigation";
 // import { updateProfile } from "./action";
 
 export default async function Profile() {
@@ -8,10 +7,6 @@ export default async function Profile() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
 
   const { data: announcement } = await supabase
     .from("announcement")
@@ -37,7 +32,7 @@ export default async function Profile() {
             <label htmlFor="nama" className="block text-sm font-medium mb-2">
               Email
             </label>
-            <p className="">{user.email}</p>
+            <p className="">{user!.email}</p>
           </div>
         </div>
 
